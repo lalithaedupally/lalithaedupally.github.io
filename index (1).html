@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lalitha Edupally — Purposeful Digital</title>
+  <meta name="description" content="Digital marketing for NGOs and community organisations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,sans-serif;color:#1a1a1a;background:#fff;line-height:1.65;font-size:16px}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    :root{
+      --blue:#1a4f8a;
+      --blue-dark:#123568;
+      --blue-light:#e8f0f9;
+      --blue-mid:#2261aa;
+      --text-dark:#1a1a1a;
+      --text-mid:#444;
+      --text-light:#777;
+      --bg-light:#f7f9fc;
+      --bg-cream:#f0f4f9;
+      --border:#dde5f0;
+      --font-display:'Playfair Display',Georgia,serif;
+      --radius:4px;--radius-lg:8px;
+      --shadow:0 2px 16px rgba(26,79,138,.08);
+      --shadow-lg:0 8px 40px rgba(26,79,138,.15);
+      --transition:0.22s ease
+    }
+    h1,h2,h3,h4{font-family:var(--font-display);line-height:1.2;color:#1a1a1a}
+    h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700}
+    h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:600}
+    h3{font-size:1.15rem;font-weight:600}
+    p{color:var(--text-mid)}
+    .container{max-width:1100px;margin:0 auto;padding:0 2rem}
+    .section{padding:80px 0}
+    .eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);display:inline-block;margin-bottom:1rem}
+    .blue{color:var(--blue)}
+    .text-center{text-align:center}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .btn{display:inline-block;padding:.75rem 1.8rem;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;border:2px solid transparent;transition:all var(--transition)}
+    .btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+    .btn-primary:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
+    .btn-outline{background:transparent;color:var(--blue);border-color:var(--blue)}
+    .btn-outline:hover{background:var(--blue);color:#fff}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--blue-dark);line-height:1.1}
+    .logo span{display:block;font-size:.62rem;font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light);margin-top:1px}
+    .nav-links{display:flex;gap:2rem;align-items:center}
+    .nav-links a{font-size:.9rem;font-weight:500;color:var(--text-mid);transition:color var(--transition)}
+    .nav-links a:hover{color:var(--blue)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:#1a1a1a;border-radius:2px}
+
+    /* HERO */
+    .hero{padding:80px 0 60px;background:#fff}
+    .hero-label{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .9rem;border-radius:2rem;margin-bottom:1.4rem}
+    .hero h1{margin-bottom:1.2rem;max-width:540px;color:#1a1a1a}
+    .hero h1 .blue{color:var(--blue);font-style:italic}
+    .hero-sub{font-size:1.05rem;color:var(--text-mid);max-width:440px;margin-bottom:2rem;line-height:1.7}
+    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .hero-placeholder{width:100%;height:460px;background:linear-gradient(135deg,var(--blue-light) 0%,var(--bg-cream) 100%);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:.9rem;font-weight:500;text-align:center;padding:2rem;flex-direction:column;gap:.5rem}
+    .hero-placeholder .icon{font-size:3rem}
+
+    /* SERVICES */
+    .services{background:var(--bg-light)}
+    .service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:box-shadow var(--transition),transform var(--transition)}
+    .service-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+    .service-icon{width:48px;height:48px;background:var(--blue-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--blue)}
+    .service-icon svg{width:22px;height:22px}
+    .service-card h3{margin-bottom:.5rem;color:#1a1a1a}
+    .service-card p{font-size:.9rem;line-height:1.7;color:var(--text-mid)}
+
+    /* ABOUT */
+    .about{background:#fff}
+    .about-placeholder{width:100%;height:500px;background:linear-gradient(135deg,var(--blue-light),var(--bg-cream));border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:500;flex-direction:column;gap:.5rem}
+    .about-placeholder .icon{font-size:3rem}
+    .about-content h2{margin-bottom:1.2rem;color:#1a1a1a}
+    .about-content p{margin-bottom:1rem;line-height:1.8;color:var(--text-mid)}
+    .skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+    .skills-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.8rem}
+    .skills-list li{font-size:.88rem;color:var(--text-mid);padding:.3rem 0;display:flex;align-items:center;gap:.5rem}
+    .skills-list li::before{content:'✓';color:var(--blue);font-weight:700}
+
+    /* TOOLS GRID WITH ICONS */
+    .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:.5rem}
+    .tool-item{background:var(--blue-light);border-radius:var(--radius-lg);padding:.7rem .5rem;display:flex;flex-direction:column;align-items:center;gap:.4rem;transition:box-shadow var(--transition),transform var(--transition)}
+    .tool-item:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+    .tool-icon{font-size:1.4rem;line-height:1}
+    .tool-name{font-size:.7rem;font-weight:600;color:var(--blue-dark);text-align:center;line-height:1.2}
+
+    /* CASE STUDIES */
+    .casestudies{background:var(--bg-light)}
+    .casestudies-sub{color:var(--text-mid);margin-bottom:3rem}
+    .cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem}
+    .cs-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow var(--transition),transform var(--transition);display:flex;flex-direction:column}
+    .cs-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+    .cs-thumb{height:170px;background:linear-gradient(135deg,var(--blue-light),var(--bg-cream));display:flex;align-items:center;justify-content:center;font-size:2.8rem}
+    .cs-body{padding:1.4rem;flex:1;display:flex;flex-direction:column}
+    .cs-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem}
+    .cs-tag{background:var(--blue-light);color:var(--blue-dark);font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:2rem}
+    .cs-body h3{font-size:1rem;margin-bottom:.4rem;color:#1a1a1a}
+    .cs-body p{font-size:.85rem;color:var(--text-mid);margin-bottom:.8rem;flex:1}
+    .cs-result{font-size:.82rem;font-weight:700;color:var(--blue);margin-bottom:1rem}
+    .cs-link{font-size:.85rem;font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:.3rem;transition:gap var(--transition)}
+    .cs-link:hover{gap:.6rem}
+
+    /* CONTACT */
+    .contact{background:var(--bg-cream)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+    .contact-info h2{margin-bottom:1rem;color:#1a1a1a}
+    .contact-info p{margin-bottom:1.5rem;color:var(--text-mid)}
+    .contact-detail{display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;font-size:.9rem;color:var(--text-mid)}
+    .contact-detail svg{color:var(--blue);flex-shrink:0}
+    .contact-form{background:#fff;border-radius:var(--radius-lg);padding:2.5rem;box-shadow:var(--shadow)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+    .form-group{margin-bottom:1rem}
+    .form-group label{display:block;font-size:.82rem;font-weight:600;color:#1a1a1a;margin-bottom:.4rem}
+    .form-group input,.form-group textarea{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:.9rem;color:#1a1a1a;background:var(--bg-light);transition:border-color var(--transition);outline:none}
+    .form-group input:focus,.form-group textarea:focus{border-color:var(--blue);background:#fff}
+    .form-group textarea{resize:vertical;min-height:120px}
+    .form-submit{width:100%;padding:.9rem;font-size:1rem}
+
+    /* FOOTER */
+    footer{background:var(--blue-dark);color:#fff;padding:2.5rem 0;text-align:center;font-size:.88rem}
+    footer p{color:#fff}
+    footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+    footer a:hover{color:rgba(255,255,255,.8)}
+    .footer-logo{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.5rem}
+    .footer-tagline{color:rgba(255,255,255,.75);font-size:.85rem;margin-bottom:1rem}
+    .footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:.75rem}
+    .footer-links a{color:rgba(255,255,255,.85);font-size:.85rem}
+    .footer-links a:hover{color:#fff}
+    .footer-divider{border:none;border-top:1px solid rgba(255,255,255,.15);margin:1.2rem 0}
+
+    /* MOBILE */
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem 2rem;border-bottom:1px solid var(--border);gap:1.2rem;box-shadow:var(--shadow)}
+      .nav-links.open{display:flex}
+      .nav-links .btn{width:100%;text-align:center}
+      .grid-2,.grid-3,.cs-grid,.contact-grid,.skills-cols,.form-row{grid-template-columns:1fr}
+      .hero{padding:48px 0 40px}
+      .hero-placeholder,.about-placeholder{height:280px}
+      .section{padding:56px 0}
+      .tools-grid{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo">Purposeful Digital<br><span>lalitha edupally</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#casestudies">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary">Let's Talk</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="hero-label">Digital Marketing Consultant</span>
+        <h1>Digital marketing for <span class="blue">NGOs and community organisations</span></h1>
+        <p class="hero-sub">I help purpose-driven organisations strengthen their digital presence, engage their communities, and increase their impact.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
+          <a href="#casestudies" class="btn btn-outline">See My Work</a>
+        </div>
+      </div>
+      <div class="hero-placeholder">
+        <span class="icon">📷</span>
+        <strong>Add your photo here</strong>
+        <small style="opacity:.7">Upload your image to GitHub and replace this section</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services section" id="services">
+  <div class="container">
+    <div class="grid-3">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Website Strategy &amp; Development</h3>
+        <p>Create accessible, user-friendly websites that help your community find the information and services they need.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Digital Marketing &amp; Campaigns</h3>
+        <p>Reach the right people through strategic social media, email marketing, and integrated campaigns that drive real results.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>CRM &amp; Donor Engagement</h3>
+        <p>Streamline communications, strengthen relationships, and improve supporter retention through effective CRM and automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section" id="about">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about-placeholder">
+        <span class="icon">📷</span>
+        <strong>Add your photo here</strong>
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">About Me</span>
+        <h2>Helping organisations create <span class="blue">meaningful digital impact</span></h2>
+        <p>With a background in community development and extensive experience working across the not-for-profit sector, I partner with NGOs and community organisations to strengthen their digital presence and improve engagement.</p>
+        <p>I understand the unique challenges purpose-driven organisations face — limited resources, competing priorities, and the need to demonstrate impact. My approach combines strategic thinking, practical implementation, and a deep understanding of the community sector.</p>
+        <div class="skills-cols">
+          <div>
+            <div class="skills-label">Expertise</div>
+            <ul class="skills-list">
+              <li>Website Strategy &amp; Development</li>
+              <li>Digital Marketing Strategy</li>
+              <li>CRM Implementation</li>
+              <li>Social Media Advertising</li>
+              <li>Email Marketing Automation</li>
+              <li>Analytics &amp; Reporting</li>
+            </ul>
+          </div>
+          <div>
+            <div class="skills-label">Tools &amp; Platforms</div>
+            <div class="tools-grid">
+              <div class="tool-item">
+                <span class="tool-icon">🌐</span>
+                <span class="tool-name">WordPress</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-icon">⚡</span>
+                <span class="tool-name">Elementor</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-icon">☁️</span>
+                <span class="tool-name">Salesforce</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-icon">🌍</span>
+                <span class="tool-name">Social Planet</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-icon">🐵</span>
+                <span class="tool-name">Mailchimp</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-icon">🎨</span>
+                <span class="tool-name">Canva</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-icon">📘</span>
+                <span class="tool-name">Meta Ads</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-icon">🔶</span>
+                <span class="tool-name">HubSpot</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-icon">📊</span>
+                <span class="tool-name">Analytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="casestudies section" id="casestudies">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Case Studies</span>
+      <h2>Real results for real impact</h2>
+      <p class="casestudies-sub">A selection of projects with purpose-driven organisations across Australia and Asia.</p>
+    </div>
+    <div class="cs-grid">
+      <div class="cs-card">
+        <div class="cs-thumb">🏛️</div>
+        <div class="cs-body">
+          <div class="cs-tags"><span class="cs-tag">Community Sector</span><span class="cs-tag">Website</span><span class="cs-tag">CRM</span></div>
+          <h3>Healesville Living &amp; Learning Centre</h3>
+          <p>Full digital transformation of a 50-year-old community centre — website rebuild, CRM, social media &amp; brand guidelines.</p>
+          <div class="cs-result">✦ Full digital transformation delivered.</div>
+          <a href="#contact" class="cs-link">Get in Touch →</a>
+        </div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-thumb">📢</div>
+        <div class="cs-body">
+          <div class="cs-tags"><span class="cs-tag">Social Enterprise</span><span class="cs-tag">Education</span></div>
+          <h3>Indus Action</h3>
+          <p>Statewide multi-channel campaign driving awareness and enrolments across diverse communities throughout India.</p>
+          <div class="cs-result">✦ 140% enrolment target exceeded.</div>
+          <a href="#contact" class="cs-link">Get in Touch →</a>
+        </div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-thumb">💻</div>
+        <div class="cs-body">
+          <div class="cs-tags"><span class="cs-tag">Women</span><span class="cs-tag">Education</span><span class="cs-tag">Digital</span></div>
+          <h3>TechReady Women Academy</h3>
+          <p>Integrated paid social and email automation to increase program conversions and streamline lead management.</p>
+          <div class="cs-result">✦ 40% increase in conversions.</div>
+          <a href="#contact" class="cs-link">Get in Touch →</a>
+        </div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-thumb">🌿</div>
+        <div class="cs-body">
+          <div class="cs-tags"><span class="cs-tag">Health &amp; Wellness</span><span class="cs-tag">Paid Social</span></div>
+          <h3>IntuWellness</h3>
+          <p>Strategic Facebook &amp; Instagram paid campaigns generating measurable ROI and growing sales for a wellness brand.</p>
+          <div class="cs-result">✦ 3.8x ROI, 25% sales increase.</div>
+          <a href="#contact" class="cs-link">Get in Touch →</a>
+        </div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-thumb">🌏</div>
+        <div class="cs-body">
+          <div class="cs-tags"><span class="cs-tag">International Development</span><span class="cs-tag">Fundraising</span></div>
+          <h3>Pilar Indonesia</h3>
+          <p>Designing and implementing a digital fundraising and donor communications strategy to grow community support.</p>
+          <div class="cs-result">✦ Stronger donor engagement &amp; retention.</div>
+          <a href="#contact" class="cs-link">Get in Touch →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Get in Touch</span>
+        <h2>Let's work together to <span class="blue">strengthen your impact</span></h2>
+        <p>Whether you're just starting your digital journey or looking to level up, I'd love to hear about your organisation's goals.</p>
+        <div class="contact-detail">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:lalitha.e1505@gmail.com">lalitha.e1505@gmail.com</a>
+        </div>
+        <div class="contact-detail">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://linkedin.com/in/lalithaedupally" target="_blank">linkedin.com/in/lalithaedupally</a>
+        </div>
+        <div class="contact-detail">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>I'll get back to you within 48 hours.</span>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="org">Organisation</label>
+              <input type="text" id="org" name="organisation" placeholder="Your Organisation" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@organisation.org" required />
+          </div>
+          <div class="form-group">
+            <label for="support">What support do you need?</label>
+            <textarea id="support" name="message" placeholder="Tell me about your organisation and what you're looking to achieve..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">Purposeful Digital</div>
+    <div class="footer-tagline">Digital marketing for NGOs and community organisations</div>
+    <hr class="footer-divider">
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#casestudies">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:lalitha.e1505@gmail.com">lalitha.e1505@gmail.com</a>
+      <a href="https://linkedin.com/in/lalithaedupally" target="_blank">LinkedIn</a>
+    </div>
+    <p style="margin-top:1.2rem;color:rgba(255,255,255,.6);font-size:.8rem;">© 2025 Purposeful Digital · Lalitha Edupally · All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+</body>
+</html>
