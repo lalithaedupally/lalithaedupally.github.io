@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,19 +11,8 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',system-ui,sans-serif;color:#1a1a1a;background:#fff;line-height:1.65;font-size:16px}
-    img{max-width:100%;display:block}
-    a{color:inherit;text-decoration:none}
-    ul{list-style:none}
-    :root{
-      --blue:#1a4f8a;--blue-dark:#123568;--blue-light:#e8f0f9;
-      --text-mid:#444;--text-light:#777;--bg-light:#f7f9fc;
-      --bg-cream:#f0f4f9;--border:#dde5f0;
-      --font-display:'Playfair Display',Georgia,serif;
-      --radius:4px;--radius-lg:8px;
-      --shadow:0 2px 16px rgba(26,79,138,.08);
-      --shadow-lg:0 8px 40px rgba(26,79,138,.15);
-      --transition:0.22s ease
-    }
+    img{max-width:100%;display:block} a{color:inherit;text-decoration:none} ul{list-style:none}
+    :root{--blue:#1a4f8a;--blue-dark:#123568;--blue-light:#e8f0f9;--text-mid:#444;--text-light:#777;--bg-light:#f7f9fc;--bg-cream:#f0f4f9;--border:#dde5f0;--font-display:'Playfair Display',Georgia,serif;--radius:4px;--radius-lg:8px;--shadow:0 2px 16px rgba(26,79,138,.08);--shadow-lg:0 8px 40px rgba(26,79,138,.15);--transition:0.22s ease}
     h1,h2,h3{font-family:var(--font-display);line-height:1.2;color:#1a1a1a}
     h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700}
     h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:600}
@@ -32,34 +22,29 @@
     .blue{color:var(--blue)}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
     .btn{display:inline-block;padding:.75rem 1.8rem;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;border:2px solid transparent;transition:all var(--transition)}
-    .btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
-    .btn-primary:hover{background:var(--blue-dark)}
-    .btn-outline{background:transparent;color:var(--blue);border-color:var(--blue)}
-    .btn-outline:hover{background:var(--blue);color:#fff}
+    .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:var(--blue-dark)}
 
     /* NAV */
     nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
     .logo{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--blue-dark);line-height:1.1}
-    .logo span{display:block;font-size:.62rem;font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light)}
+    .logo span{display:block;font-size:.62rem;font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light);margin-top:6px}
     .nav-links{display:flex;gap:2rem;align-items:center}
-    .nav-links a{font-size:.9rem;font-weight:500;color:var(--text-mid);transition:color var(--transition)}
-    .nav-links a:hover{color:var(--blue)}
+    .nav-links a{font-size:.9rem;font-weight:500;color:var(--text-mid)}.nav-links a:hover{color:var(--blue)}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
     .hamburger span{display:block;width:24px;height:2px;background:#1a1a1a;border-radius:2px}
 
     /* HERO */
     .cs-hero{padding:64px 0 48px;background:#fff;border-bottom:1px solid var(--border)}
-    .back-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--blue);font-size:.88rem;font-weight:600;margin-bottom:2rem;transition:gap var(--transition)}
-    .back-link:hover{gap:.7rem}
+    .back-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--blue);font-size:.88rem;font-weight:600;margin-bottom:2rem}
+    .back-link:hover{text-decoration:underline}
     .cs-hero h1{max-width:680px;margin-bottom:1rem}
     .cs-desc{font-size:1.05rem;max-width:580px;margin-bottom:1.5rem}
     .cs-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
     .cs-tag{background:var(--blue-light);color:var(--blue-dark);font-size:.78rem;font-weight:600;padding:.3rem .9rem;border-radius:2rem}
-    .cs-services{font-size:.88rem;color:var(--text-mid)}
-    .cs-services strong{color:#1a1a1a}
+    .cs-services{font-size:.88rem;color:var(--text-mid)}.cs-services strong{color:#1a1a1a}
     .mockup-box{background:var(--bg-cream);border-radius:var(--radius-lg);padding:2rem;min-height:280px;display:flex;align-items:center;justify-content:center;color:var(--blue);font-weight:500;text-align:center;flex-direction:column;gap:.75rem;border:1px solid var(--border)}
-    .mockup-box .icon{font-size:3rem}
+    .mockup-box .icon{font-size:3.5rem}
 
     /* SECTIONS */
     .cs-section{padding:64px 0}
@@ -71,12 +56,21 @@
     .cs-list{margin-top:.75rem}
     .cs-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.92rem;color:var(--text-mid);padding:.35rem 0;line-height:1.65}
     .cs-list li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:2px}
-    .visual-box{background:var(--bg-cream);border-radius:var(--radius-lg);padding:1.5rem;text-align:center;color:var(--blue);font-weight:500;font-size:.88rem;min-height:160px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);flex-direction:column;gap:.5rem;margin-bottom:1rem}
+    .visual-box{background:var(--bg-cream);border-radius:var(--radius-lg);padding:1.5rem;text-align:center;color:var(--blue);font-weight:500;font-size:.88rem;min-height:150px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);flex-direction:column;gap:.5rem;margin-bottom:1rem}
     .visual-box .icon{font-size:2rem}
+
+    /* SERVICE PILLARS */
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}
+    .pillar{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem;border-top:3px solid var(--blue)}
+    .pillar-icon{font-size:1.6rem;margin-bottom:.6rem}
+    .pillar h4{font-family:var(--font-display);font-size:.95rem;font-weight:600;color:#1a1a1a;margin-bottom:.5rem}
+    .pillar ul{margin:0}
+    .pillar ul li{font-size:.82rem;color:var(--text-mid);padding:.2rem 0;display:flex;align-items:flex-start;gap:.4rem;line-height:1.5}
+    .pillar ul li::before{content:'·';color:var(--blue);font-weight:700;flex-shrink:0}
 
     /* STATS */
     .stats-row{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1.5rem}
-    .stat{background:var(--blue-light);border-radius:var(--radius-lg);padding:1.2rem 1.6rem;text-align:center;flex:1;min-width:120px}
+    .stat{background:var(--blue-light);border-radius:var(--radius-lg);padding:1.2rem 1.6rem;text-align:center;flex:1;min-width:110px}
     .stat-num{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--blue)}
     .stat-label{font-size:.78rem;color:var(--text-mid);margin-top:.2rem}
 
@@ -86,6 +80,10 @@
     .cs-quote p{color:rgba(255,255,255,.92);font-size:1.05rem;line-height:1.7;font-style:italic;margin-bottom:1rem}
     .cs-quote cite{font-size:.85rem;color:rgba(255,255,255,.7);font-style:normal;font-weight:600}
 
+    /* ONGOING BADGE */
+    .ongoing-badge{display:inline-flex;align-items:center;gap:.4rem;background:#dcfce7;color:#166534;font-size:.78rem;font-weight:600;padding:.3rem .9rem;border-radius:2rem;margin-bottom:1rem}
+    .ongoing-badge::before{content:'●';font-size:.5rem}
+
     /* CTA */
     .cs-cta{background:var(--bg-cream);padding:64px 0;text-align:center;border-top:1px solid var(--border)}
     .cs-cta h2{margin-bottom:.75rem}
@@ -93,29 +91,27 @@
 
     /* FOOTER */
     footer{background:var(--blue-dark);color:#fff;padding:2.5rem 0;text-align:center;font-size:.88rem}
-    footer p{color:#fff}
-    footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+    footer p{color:#fff} footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
     .footer-logo{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.4rem}
     .footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:.75rem}
     .footer-links a{color:rgba(255,255,255,.85);font-size:.85rem}
-    hr.footer-divider{border:none;border-top:1px solid rgba(255,255,255,.15);margin:1rem 0}
+    hr.fd{border:none;border-top:1px solid rgba(255,255,255,.15);margin:1rem 0}
 
     @media(max-width:768px){
       .hamburger{display:flex}
       .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem 2rem;border-bottom:1px solid var(--border);gap:1.2rem;box-shadow:var(--shadow)}
       .nav-links.open{display:flex}
-      .grid-2,.stats-row{grid-template-columns:1fr}
-      .grid-2{display:block}
-      .grid-2>*+*{margin-top:2rem}
-      .cs-hero{padding:40px 0 32px}
-      .cs-section{padding:48px 0}
+      .grid-2{display:block}.grid-2>*+*{margin-top:2rem}
+      .pillars-grid{grid-template-columns:1fr}
+      .cs-hero{padding:40px 0 32px}.cs-section{padding:48px 0}
     }
   </style>
 </head>
 <body>
+
 <nav>
   <div class="container nav-inner">
-    <a href="index.html" class="logo">Purposeful Digital<br><span>lalitha edupally</span></a>
+    <a href="index.html" class="logo">Purposeful Digital<br><span>LALITHA EDUPALLY</span></a>
     <div class="nav-links" id="navLinks">
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
@@ -127,22 +123,25 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="cs-hero">
   <div class="container">
     <a href="index.html#casestudies" class="back-link">← Back to Work</a>
     <div class="grid-2">
       <div>
+        <span class="ongoing-badge">Ongoing Partnership</span>
         <span class="eyebrow">Case Study 1</span>
-        <h1>Digital transformation for a 50-year community centre</h1>
-        <p class="cs-desc">Full digital transformation of Healesville Living & Learning Centre — connecting locals to services, programs, and each other.</p>
+        <h1>Full digital ecosystem for a 50-year community centre</h1>
+        <p class="cs-desc">An ongoing digital partnership with Healesville Living & Learning Centre — building their digital presence, engaging their community, and measuring their impact.</p>
         <div class="cs-tags">
           <span class="cs-tag">Community Sector</span>
           <span class="cs-tag">Neighbourhood House</span>
           <span class="cs-tag">Victoria</span>
         </div>
-        <p class="cs-services"><strong>Services:</strong> Website rebuild · Social Planet CRM · Social media strategy · Brand guidelines · Analytics</p>
+        <p class="cs-services"><strong>Services:</strong> Website management · SEO · Social media · Email marketing · Google Analytics · Facebook advertising · Digital strategy</p>
       </div>
       <div class="mockup-box">
+        <!-- Replace with: <img src="assets/images/hllc.jpg" alt="HLLC" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"> -->
         <span class="icon">🏛️</span>
         <strong>Healesville Living & Learning Centre</strong>
         <small style="color:var(--text-mid)">Add project screenshot here</small>
@@ -151,81 +150,150 @@
   </div>
 </section>
 
+<!-- ABOUT CLIENT -->
 <section class="cs-section">
   <div class="container">
     <div class="grid-2">
       <div>
-        <div class="section-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <div class="section-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
         <div class="section-label">The Challenge</div>
-        <h2>An outdated digital presence failing the community</h2>
-        <p>The existing website was outdated with broken links and poor mobile experience. There was no CRM integration, brand inconsistency across materials, and no analytics to understand community engagement.</p>
-        <p style="margin-top:1rem">HLLC serves hundreds of local residents each week — they needed a digital foundation as strong as their community work.</p>
-      </div>
-      <div>
-        <div class="visual-box"><span class="icon">🖥️</span>Add "before" website screenshot here</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cs-section">
-  <div class="container">
-    <div class="grid-2">
-      <div>
-        <div class="section-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <div class="section-label">What I Did</div>
-        <h2>A complete digital ecosystem rebuild</h2>
-        <ul class="cs-list">
-          <li>Rebuilt the website on WordPress for a modern, accessible experience easy for the team to manage</li>
-          <li>Implemented Social Planet CRM to centralise contacts, communications and reporting</li>
-          <li>Developed a social media strategy to increase community engagement and event attendance</li>
-          <li>Created brand guidelines and Canva templates for consistent, on-brand communications</li>
-          <li>Set up Google Analytics and conversion tracking to measure impact and inform decisions</li>
+        <h2>A beloved community hub with an outdated digital presence</h2>
+        <p>Healesville Living & Learning Centre has served the local community for over 50 years — running programs, events, and services for people of all ages. But their digital presence wasn't keeping up.</p>
+        <ul class="cs-list" style="margin-top:1rem">
+          <li>Outdated website with broken links and poor mobile experience</li>
+          <li>Inconsistent brand across social media and printed materials</li>
+          <li>No analytics to understand what was working</li>
+          <li>No email marketing strategy to keep the community informed</li>
+          <li>Limited social media presence and no advertising strategy</li>
         </ul>
       </div>
-      <div>
-        <div class="visual-box"><span class="icon">🖥️</span>New website screenshot</div>
-        <div class="visual-box"><span class="icon">📱</span>Social media examples</div>
-        <div class="visual-box"><span class="icon">🎨</span>Brand guidelines preview</div>
-      </div>
     </div>
   </div>
 </section>
 
+<!-- WHAT I DO -->
 <section class="cs-section">
   <div class="container">
-    <div class="section-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+    <div class="section-icon">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+    </div>
+    <div class="section-label">What I Do</div>
+    <h2>An ongoing digital partnership across every channel</h2>
+    <p>I work closely with the HLLC team as their dedicated digital partner — managing their online presence end-to-end so they can focus on what they do best: serving their community.</p>
+
+    <div class="pillars-grid">
+
+      <div class="pillar">
+        <div class="pillar-icon">🌐</div>
+        <h4>Website Management & SEO</h4>
+        <ul>
+          <li>Maintaining and updating their WordPress website</li>
+          <li>Ensuring pages are current, accessible and mobile-friendly</li>
+          <li>On-page SEO to improve search visibility</li>
+          <li>Monitoring site performance and fixing issues</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-icon">📱</div>
+        <h4>Social Media Management</h4>
+        <ul>
+          <li>Developing monthly social media strategy</li>
+          <li>Drafting and publishing Facebook posts</li>
+          <li>Creating on-brand graphics using Canva</li>
+          <li>Facebook advertising campaigns</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-icon">📧</div>
+        <h4>Email Marketing & Newsletters</h4>
+        <ul>
+          <li>Drafting monthly community newsletters</li>
+          <li>Publishing and distributing via Mailchimp</li>
+          <li>Analysing open rates, clicks and engagement</li>
+          <li>Growing and managing the subscriber list</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-icon">📊</div>
+        <h4>Analytics & Reporting</h4>
+        <ul>
+          <li>Setting up and managing Google Analytics</li>
+          <li>Monthly performance reports for the team</li>
+          <li>Tracking website traffic, social reach and email metrics</li>
+          <li>Using data to inform content and strategy decisions</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-icon">🎯</div>
+        <h4>Digital Strategy</h4>
+        <ul>
+          <li>Developing quarterly digital marketing strategy</li>
+          <li>Aligning digital activity to program and event goals</li>
+          <li>Identifying opportunities to grow reach and engagement</li>
+          <li>Advising on tools, platforms and best practice</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-icon">☁️</div>
+        <h4>CRM & Communications</h4>
+        <ul>
+          <li>Managing Social Planet CRM</li>
+          <li>Maintaining contact lists and segmentation</li>
+          <li>Streamlining community communications</li>
+          <li>Supporting data integrity and reporting</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE RESULT -->
+<section class="cs-section">
+  <div class="container">
+    <div class="section-icon">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+    </div>
     <div class="section-label">The Result</div>
-    <h2>A fully integrated digital ecosystem</h2>
+    <h2>A thriving digital presence that serves the community</h2>
     <div class="grid-2">
       <div>
         <ul class="cs-list">
-          <li>A fully integrated digital ecosystem that's easier to manage and delivering stronger community outcomes</li>
-          <li>New website launched with improved user experience and mobile performance</li>
-          <li>All supporter data now in one place with Social Planet CRM</li>
-          <li>Consistent brand across all channels and materials</li>
-          <li>Analytics and reporting now inform decisions and strategy</li>
+          <li>A fully maintained, up-to-date website that reflects the centre's programs and services</li>
+          <li>Consistent, engaging social media presence reaching more community members each month</li>
+          <li>Regular newsletters keeping hundreds of subscribers informed and connected</li>
+          <li>Clear analytics and reporting giving the team visibility of what's working</li>
+          <li>A cohesive digital strategy aligned to HLLC's community goals</li>
+          <li>Improved search visibility through ongoing SEO work</li>
         </ul>
         <div class="stats-row">
           <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Years of history, now online</div></div>
-          <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Mobile responsive</div></div>
-          <div class="stat"><div class="stat-num">1</div><div class="stat-label">Unified CRM platform</div></div>
+          <div class="stat"><div class="stat-num">6</div><div class="stat-label">Digital channels managed</div></div>
+          <div class="stat"><div class="stat-num">↑</div><div class="stat-label">Community reach & engagement</div></div>
         </div>
       </div>
       <div>
         <div class="cs-quote">
-          <p>"Purposeful Digital completely transformed our digital presence. Our new website looks fantastic, our systems are streamlined, and we can now connect with our community more effectively."</p>
-          <cite>— Leanne, Executive Officer, HLLC</cite>
+          <p>""</p>
+          <cite>— </cite>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <div class="cs-cta">
   <div class="container">
     <span class="eyebrow">Working on something similar?</span>
-    <h2>Let's talk about your project</h2>
+    <h2>Let's talk about your organisation</h2>
     <p>Every community organisation deserves a digital presence that works as hard as they do.</p>
     <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
   </div>
@@ -234,7 +302,7 @@
 <footer>
   <div class="container">
     <div class="footer-logo">Purposeful Digital</div>
-    <hr class="footer-divider">
+    <hr class="fd">
     <div class="footer-links">
       <a href="index.html#about">About</a>
       <a href="index.html#casestudies">Work</a>
@@ -244,6 +312,7 @@
     <p style="margin-top:1.2rem;color:rgba(255,255,255,.6);font-size:.8rem">© 2025 Purposeful Digital · Lalitha Edupally</p>
   </div>
 </footer>
+
 <script>
   const h=document.getElementById('hamburger'),n=document.getElementById('navLinks');
   h.addEventListener('click',()=>n.classList.toggle('open'));
