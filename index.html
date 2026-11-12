@@ -63,20 +63,16 @@
     .hamburger span{display:block;width:24px;height:2px;background:#1a1a1a;border-radius:2px}
 
     /* HERO */
-    .hero{padding:0;background:#fff}
-    .hero-bg{position:relative;background-size:cover;background-position:center top;min-height:600px;display:flex;align-items:center}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.05) 100%)}
-    .hero-content{position:relative;z-index:2;padding-top:80px;padding-bottom:80px;max-width:640px}
-    .hero-label{display:inline-block;background:rgba(255,255,255,0.18);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .9rem;border-radius:2rem;margin-bottom:1.4rem;backdrop-filter:blur(4px)}
-    .hero h1{margin-bottom:1.2rem;max-width:580px;color:#fff}
-    .blue-light-text{color:#93c5fd}
-    .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.88);max-width:480px;margin-bottom:2rem;line-height:1.7}
-    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-    .btn-white{background:#fff;color:var(--blue);border:2px solid #fff}
-    .btn-white:hover{background:rgba(255,255,255,0.9)}
-    .btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.8)}
-    .btn-outline-white:hover{background:rgba(255,255,255,0.15)}
-
+.cs-hero{padding:64px 0 48px;background:var(--blue-dark);border-bottom:none}
+.cs-hero h1{color:#fff;max-width:680px;margin-bottom:1rem}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;color:#fff;font-size:.88rem;font-weight:600;margin-bottom:2rem}
+.back-link:hover{text-decoration:underline}
+.cs-desc{font-size:1.05rem;max-width:580px;margin-bottom:1.5rem;color:#DCE7F5}
+.cs-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.cs-tag{background:#fff;color:var(--blue-dark);font-size:.78rem;font-weight:600;padding:.3rem .9rem;border-radius:2rem}
+.cs-services{font-size:.88rem;color:#DCE7F5}.cs-services strong{color:#fff}
+.mockup-box{background:rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:2rem;min-height:280px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:500;text-align:center;flex-direction:column;gap:.75rem;border:1px solid rgba(255,255,255,.25)}
+.mockup-box .icon{font-size:3.5rem}
     /* SERVICES */
     .services{background:var(--bg-light)}
     .service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:box-shadow var(--transition),transform var(--transition)}
