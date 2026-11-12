@@ -64,7 +64,7 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid va
 .btn-outline-white:hover{background:#fff;color:var(--blue-dark)}
 
 /* SERVICES (cards overlap the hero) */
-.services.section{position:relative;z-index:2;margin-top:-72px;padding:0 0 56px;background:linear-gradient(to bottom,transparent 72px,var(--bg-light) 72px)}
+.services.section{position:relative;z-index:2;margin-top:-72px;padding:0 0 36px;background:linear-gradient(to bottom,transparent 72px,var(--bg-light) 72px)}
 .service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.6rem;box-shadow:var(--shadow-lg);transition:transform var(--transition)}
 .service-card:hover{transform:translateY(-3px)}
 .service-icon{width:44px;height:44px;background:var(--blue-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;color:var(--blue)}
@@ -75,12 +75,16 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid va
 
 /* ABOUT */
 .about{background:#fff}
-.about-content h2{margin-bottom:1rem}
-.about-content p{margin-bottom:1rem;line-height:1.8}
-.founder-box{background:var(--bg-light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem 1.25rem}
+.about.section{padding:28px 0 32px}
+.about .grid-2{align-items:stretch;gap:2rem}
+.about-photo{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.about-content .eyebrow{margin-bottom:.5rem}
+.about-content h2{margin-bottom:.75rem}
+.about-content p{margin-bottom:.75rem;line-height:1.7}
+.founder-box{background:var(--bg-light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:.9rem 1.1rem}
 .founder-box strong{display:block;font-size:.9rem;color:var(--blue-dark);margin-bottom:.25rem}
 .founder-box p{font-size:.85rem;line-height:1.65;margin:0}
-.tools-row{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.tools-row{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)}
 .tools-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-right:.5rem}
 .tool-pill{background:var(--blue-light);color:var(--blue-dark);font-size:.78rem;font-weight:600;padding:.3rem .8rem;border-radius:2rem}
 
@@ -150,6 +154,8 @@ footer p{color:#fff}
 .nav-links .btn{width:100%;text-align:center}
 .grid-2,.grid-3,.contact-grid,.form-row{grid-template-columns:1fr}
 .t-featured{padding:1.75rem 1.5rem}
+.about.section{padding:24px 0 28px}
+.about-photo{height:auto;max-height:340px}
 .t-featured blockquote{font-size:1rem}
 .cs-card{flex-basis:100%}
 .hero-bg{min-height:auto}
@@ -234,7 +240,7 @@ footer p{color:#fff}
 <section class="about section" id="about">
 <div class="container">
 <div class="grid-2">
-<img src="assets/images/about-pic.png" alt="Lalitha Edupally, founder of Blue Slate Consulting" style="width:100%;height:auto;border-radius:8px;" />
+<img src="assets/images/about-pic.png" alt="Lalitha Edupally, founder of Blue Slate Consulting" class="about-photo" />
 <div class="about-content">
 <span class="eyebrow">About Blue Slate Consulting</span>
 <h2>Digital marketing <span class="blue">built for the community sector</span></h2>
