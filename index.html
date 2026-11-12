@@ -80,14 +80,9 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid va
 .founder-box{background:var(--bg-light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem 1.25rem}
 .founder-box strong{display:block;font-size:.9rem;color:var(--blue-dark);margin-bottom:.25rem}
 .founder-box p{font-size:.85rem;line-height:1.65;margin:0}
-.skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
-.skills-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.8rem}
-.skills-list li{font-size:.88rem;color:var(--text-mid);padding:.3rem 0;display:flex;align-items:center;gap:.5rem}
-.skills-list li::before{content:'✓';color:var(--blue);font-weight:700}
-.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:.5rem}
-.tool-item{background:var(--blue-light);border-radius:var(--radius-lg);padding:.7rem .5rem;display:flex;flex-direction:column;align-items:center;gap:.4rem}
-.tool-icon{font-size:1.4rem;line-height:1}
-.tool-name{font-size:.7rem;font-weight:600;color:var(--blue-dark);text-align:center;line-height:1.2}
+.tools-row{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.tools-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-right:.5rem}
+.tool-pill{background:var(--blue-light);color:var(--blue-dark);font-size:.78rem;font-weight:600;padding:.3rem .8rem;border-radius:2rem}
 
 /* CASE STUDIES */
 .casestudies{background:var(--bg-light)}
@@ -105,6 +100,15 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid va
 .cs-link{font-size:.85rem;font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:.3rem;transition:gap var(--transition)}
 .cs-link:hover{gap:.6rem}
 .cs-note{text-align:center;font-size:.78rem;color:var(--text-mid);margin-top:1.5rem}
+
+/* TESTIMONIALS */
+.testimonials{background:#fff}
+.testimonials h2{margin-bottom:2rem}
+.t-featured{background:var(--blue-dark);border-radius:var(--radius-lg);padding:2.5rem 2.75rem;max-width:900px;margin:0 auto}
+.t-featured blockquote{font-family:var(--font-display);font-size:1.12rem;line-height:1.75;color:#fff}
+.t-featured blockquote::before{content:'\201C';display:block;font-size:3.5rem;line-height:.6;color:#9CC4F5;margin-bottom:.75rem}
+.t-featured figcaption{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.2);font-size:.88rem;color:rgba(255,255,255,.8)}
+.t-featured figcaption strong{display:block;color:#fff;font-size:.95rem}
 
 /* CONTACT */
 .contact{background:var(--bg-cream)}
@@ -144,7 +148,9 @@ footer p{color:#fff}
 .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem 2rem;border-bottom:1px solid var(--border);gap:1.2rem;box-shadow:var(--shadow)}
 .nav-links.open{display:flex}
 .nav-links .btn{width:100%;text-align:center}
-.grid-2,.grid-3,.contact-grid,.skills-cols,.form-row{grid-template-columns:1fr}
+.grid-2,.grid-3,.contact-grid,.form-row{grid-template-columns:1fr}
+.t-featured{padding:1.75rem 1.5rem}
+.t-featured blockquote{font-size:1rem}
 .cs-card{flex-basis:100%}
 .hero-bg{min-height:auto}
 .hero-overlay{background:rgba(18,53,104,.88)}
@@ -240,32 +246,17 @@ footer p{color:#fff}
 </div>
 </div>
 </div>
-<div class="skills-cols">
-<div>
-<div class="skills-label">Expertise</div>
-<ul class="skills-list">
-<li>Website Strategy &amp; Development</li>
-<li>Digital Marketing Strategy</li>
-<li>CRM Implementation</li>
-<li>Social Media Advertising</li>
-<li>Email Marketing Automation</li>
-<li>Analytics &amp; Reporting</li>
-</ul>
-</div>
-<div>
-<div class="skills-label">Tools &amp; Platforms</div>
-<div class="tools-grid">
-<div class="tool-item"><span class="tool-icon">🌐</span><span class="tool-name">WordPress</span></div>
-<div class="tool-item"><span class="tool-icon">⚡</span><span class="tool-name">Elementor</span></div>
-<div class="tool-item"><span class="tool-icon">☁️</span><span class="tool-name">Salesforce</span></div>
-<div class="tool-item"><span class="tool-icon">🌍</span><span class="tool-name">Social Planet</span></div>
-<div class="tool-item"><span class="tool-icon">🐵</span><span class="tool-name">Mailchimp</span></div>
-<div class="tool-item"><span class="tool-icon">🎨</span><span class="tool-name">Canva</span></div>
-<div class="tool-item"><span class="tool-icon">📘</span><span class="tool-name">Meta Ads</span></div>
-<div class="tool-item"><span class="tool-icon">🔶</span><span class="tool-name">HubSpot</span></div>
-<div class="tool-item"><span class="tool-icon">📊</span><span class="tool-name">Analytics</span></div>
-</div>
-</div>
+<div class="tools-row">
+<span class="tools-label">Tools we work with</span>
+<span class="tool-pill">WordPress</span>
+<span class="tool-pill">Elementor</span>
+<span class="tool-pill">Salesforce</span>
+<span class="tool-pill">Social Planet</span>
+<span class="tool-pill">Mailchimp</span>
+<span class="tool-pill">Canva</span>
+<span class="tool-pill">Meta Ads</span>
+<span class="tool-pill">HubSpot</span>
+<span class="tool-pill">Google Analytics</span>
 </div>
 </div>
 </section>
@@ -328,6 +319,20 @@ footer p{color:#fff}
 </div>
 </div>
 <p class="cs-note">Projects delivered by founder Lalitha Edupally as an independent consultant, prior to the establishment of Blue Slate Consulting.</p>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials section" id="testimonials">
+<div class="container">
+<div class="text-center">
+<span class="eyebrow">Testimonial</span>
+<h2>In our client's words</h2>
+</div>
+<figure class="t-featured">
+<blockquote>We have engaged Lalitha as an independent contractor to lead our digital, social media and marketing work and she has transformed how Healesville Living and Learning Centre shows up online. This has included migrating and managing our new website, integrating our Social Planet CRM, establishing Google Analytics and completing our SEO, alongside monthly e-newsletters, social media and broader design work. Beyond her exceptional technical skills, she is organised, thoughtful and consistently delivers her work on time. Lalitha is a pleasure to work with and I cannot recommend her highly enough.</blockquote>
+<figcaption><strong>Nich Rogers</strong>Executive Officer, Healesville Living and Learning Centre</figcaption>
+</figure>
 </div>
 </section>
 
